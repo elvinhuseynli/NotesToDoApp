@@ -1,0 +1,80 @@
+.header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .backbutton {
+    width: fit-content;
+    background-color: #c2dad8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .list {
+    margin: 0 10px;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .requests {
+    margin: 0 10px;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .invites {
+    margin: 0 10px;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+  }
+  
+  .centered-list {
+    text-align: center;
+    padding: 0;
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+    list-style-type: none;
+  }
+  
+  .centered-list li {
+    margin-bottom: 15px;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .list-header {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+    font-size: 24px;
+  }
+
+  .no-friends {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+  }
+  

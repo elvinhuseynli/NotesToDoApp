@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag "list.css", :media => "all" %>
+
+<div class="backbutton">
+  <%= link_to "Go Back", authenticated_root_path, class: "custom-link" %>
+</div>
+
+<div class="header">
+  <div class="list">
+    <%= link_to "Friends List", friendships_friends_list_path, class: "custom-link" %>
+  </div>
+    
+  <div class="requests">
+    <%= link_to "Send Request", friendships_index_path, class: "custom-link" %>
+  </div>
+
+  <div class="invites">
+    <%= link_to "See Invites", friendships_invitations_path, class: "custom-link" %>
+  </div>
+</div>
+
+<h1 class = "list-header">Friends List</h1>
+
+<% if @friends.present? %>
+  <ul class="centered-list">
+    <% @friends.each do |friend| %>
+      <li><%= friend %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p class = "no-friends">No friends available.</p>
+<% end %>

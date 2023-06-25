@@ -1,0 +1,61 @@
+.notice {
+    color: green;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #render-post {
+    margin-bottom: 20px;
+  }
+  
+  #note-manage {
+    margin-bottom: 10px;
+  }
+  
+  #note-manage a {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #note-manage a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #destroy {
+    text-align: right;
+  }
+  
+  .destroy-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .destroy-button:hover {
+    background-color: #c82333;
+  }
+  

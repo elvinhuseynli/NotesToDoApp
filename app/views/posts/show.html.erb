@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "show.css", :media => "all" %>
+
+<p class="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>Note</h1>
+  <div id="render-post">
+    <%= render @post %>
+  </div>
+
+  <div id="bottom">
+    <div id="note-manage">
+      <%= link_to "Edit this post", edit_post_path(@post) %> |
+      <%= link_to "Back to posts", posts_path %>
+    </div>
+        
+    <div id="destroy">
+      <%= button_to "Destroy this post", @post, method: :delete, class: "destroy-button" %>
+    </div>
+  </div>
+</div>

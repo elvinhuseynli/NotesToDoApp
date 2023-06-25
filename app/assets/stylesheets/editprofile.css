@@ -1,0 +1,141 @@
+#main {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .field {
+    margin-bottom: 10px;
+  }
+  
+  .field label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .field input[type="email"],
+  .field input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .confirmation-message {
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+  }
+  
+  .actions {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .actions input[type="submit"].button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+  
+  .actions input[type="submit"].button:hover {
+    background-color: #45a049;
+  }
+  
+  .cancel-account {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .cancel-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #d32f2f;
+  }
+
+  .cancel-heading {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .cancel-account {
+    text-align: center;
+  }
+  
+  .unhappy-text {
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #777;
+  }
+  
+  .update-button {
+    width: 150px; /* Adjust the width as desired */
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+  
+  .update-button:hover {
+    background-color: #45a049;
+  }
+  
+  
+  .back-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }

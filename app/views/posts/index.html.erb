@@ -1,0 +1,41 @@
+<p class="notice"><%= notice %></p>
+
+<%= stylesheet_link_tag "index.css", :media => "all" %>
+
+<div class="container">
+  <div id="links-container">
+    <div id="profile">
+      <div id="edit-profile">
+        <%= link_to "Edit Profile", edit_user_registration_path, class: "button-link" %>
+      </div>
+      <div id="friends">
+        <%= link_to "Friendships", friendships_friends_list_path, class: "button-link" %>
+      </div>
+      <div id="logout">
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "button-link" %>
+      </div>
+    </div>
+  </div>
+
+  <div id="header">
+    <h1>My Notes</h1>
+  </div>
+
+    <div id="new-post">
+      <%= link_to "Add Note", new_post_path, class: "button-link" %>
+    </div>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+    <div class="post-container">
+      <div class="post-render">
+        <%= render post %>
+      </div>
+
+      <p class="show">
+        <%= link_to "Show", post %>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</div>

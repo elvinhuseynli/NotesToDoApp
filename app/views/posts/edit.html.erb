@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "edit.css", :media => "all" %>
+<div class="container">
+    <h1 class="title">Edit Note</h1>
+
+    <%= render "form", post: @post %>
+
+    <br>
+
+    <div class="links">
+        <%= link_to "Show this post", @post %> |
+        <%= link_to "Back to posts", posts_path %>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag "friendship_invites.css", :media => "all" %>
+
+<div class ="backbutton">
+    <%= link_to "Go Back"  ,  authenticated_root_path, class: "custom-link" %>
+</div>
+
+<div class= "header">
+
+    <div class ="list">
+        <%= link_to "Friends List"  ,  friendships_friends_list_path, class: "custom-link" %>
+    </div>
+    
+    <div class ="requests">
+        <%= link_to "Send Request"  ,  friendships_index_path, class: "custom-link" %>
+    </div>
+
+    <div class = "invites">
+        <%= link_to "See Invites"  ,  friendships_invitations_path, class: "custom-link" %>
+    </div>
+
+
+</div>
+
+<h1 class="inv-header">Friend Invitations</h1>
+<% if @received_requests.any? %>
+  <ul>
+    <% @received_requests.each do |request| %>
+      <li>
+        <div class="friend-request">
+          <p class="friend-email"><%= request.sender.email %></p>
+          <div class="friend-actions">
+            <%= button_to 'Accept', friendships_accept_request_path(request.id), method: :patch, class: 'btn-accept' %>
+            <%= button_to 'Reject', friendships_reject_request_path(request.id), method: :delete, class: 'btn-reject' %>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p class="no-friends">No friend invitations found.</p>
+<% end %>

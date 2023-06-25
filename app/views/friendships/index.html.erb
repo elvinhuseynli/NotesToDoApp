@@ -1,0 +1,65 @@
+<%= stylesheet_link_tag "friendship_index.css", :media => "all" %>
+
+<% if params[:notice] %>
+  <div class="notice">
+    <%= params[:notice] %>
+  </div>
+<% end %>
+
+
+<div class ="backbutton">
+    <%= link_to "Go Back"  ,  authenticated_root_path, class: "custom-link" %>
+</div>
+
+<div class= "header">
+
+    <div class ="list">
+        <%= link_to "Friends List"  ,  friendships_friends_list_path, class: "custom-link" %>
+    </div>
+
+    <div class ="requests">
+        <%= link_to "Send Request"  ,  friendships_index_path, class: "custom-link" %>
+    </div>
+
+    <div class = "invites">
+        <%= link_to "See Invites"  ,  friendships_invitations_path, class: "custom-link" %>
+    </div>
+
+</div>
+
+<div class="search-container">
+
+  <form action="<%= friendships_index_path %>" method="GET" class="search-form">
+
+    <input type="text" name="query" placeholder="Search..." class="search-input">
+
+    <button type="submit" class="search-button">Search</button>
+  
+  </form>
+
+</div>
+
+
+<h2 class="search-header">Search Results</h2>
+
+<ul class="search-results">
+    <% if @users.present? %>
+        <% @users.each do |user| %>
+            <li class="search-result">
+                <div class="user-info">
+                    <p class="user-email"><%= user.email %></p>
+                    <% if @sent_requests.include?(user.id) %>
+                        <span class="sent-button">Sent</span>
+                    <% else %>
+                        <%= link_to 'Send Friend Request', friendships_send_request_path(senderId: current_user.id, receiverId: user.id, status: "pending"), method: :get, class: 'send-request-link' %>
+                    <% end %>
+                </div>
+            </li>
+        <% end %>
+    <% else %>
+        <p class="no-results-message">No results available.</p>
+    <% end %>
+
+</ul>
+
+
